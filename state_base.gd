@@ -2,7 +2,9 @@ extends Node
 
 class_name  StateBase
 
-func enter()->void:
+var state_name:String = "StateBase"
+
+func enter(msg:Dictionary = {})->void:
 	pass
 	
 func exit()->void:

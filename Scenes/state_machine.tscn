@@ -1,17 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://cq3ar31ny6hd8"]
+[gd_scene load_steps=4 format=3 uid="uid://b8mbmj3nkrc51"]
 
-[ext_resource type="Script" path="res://state_machine.gd" id="1_3ah03"]
-[ext_resource type="Script" path="res://state_1.gd" id="2_ahpil"]
-[ext_resource type="Script" path="res://state_2.gd" id="3_s26ai"]
+[ext_resource type="Script" path="res://FSM/state_machine.gd" id="1_lj6uu"]
+[ext_resource type="Script" path="res://FSM/state_1.gd" id="2_pkjw1"]
+[ext_resource type="Script" path="res://FSM/state_2.gd" id="3_ka2o0"]
 
 [node name="state_machine" type="Node"]
-script = ExtResource("1_3ah03")
+script = ExtResource("1_lj6uu")
 initial_state = NodePath("state_1")
 
 [node name="state_1" type="Node" parent="."]
-script = ExtResource("2_ahpil")
+script = ExtResource("2_pkjw1")
 
 [node name="state_2" type="Node" parent="."]
-script = ExtResource("3_s26ai")
+script = ExtResource("3_ka2o0")
 
 [node name="state_3" type="Node" parent="."]

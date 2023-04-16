@@ -1,0 +1,30 @@
+[gd_scene load_steps=8 format=3 uid="uid://dxcrfaou7hmrh"]
+
+[ext_resource type="Script" path="res://Behavior_Tree/Behavior_Tree.gd" id="1_i3mip"]
+[ext_resource type="Script" path="res://Behavior_Tree/BTSelector.gd" id="2_5bli5"]
+[ext_resource type="Script" path="res://Behavior_Tree/BTEat.gd" id="3_g4hck"]
+[ext_resource type="Script" path="res://Behavior_Tree/BTSleep.gd" id="4_77lsb"]
+[ext_resource type="Script" path="res://Behavior_Tree/BTSequence.gd" id="5_gtni2"]
+[ext_resource type="Script" path="res://Behavior_Tree/BTBeatA.gd" id="6_cmx4f"]
+[ext_resource type="Script" path="res://Behavior_Tree/BTBeatB.gd" id="7_4b1ms"]
+
+[node name="Behavior_Tree" type="Node"]
+script = ExtResource("1_i3mip")
+
+[node name="BTSelector" type="Node" parent="."]
+script = ExtResource("2_5bli5")
+
+[node name="BTEat" type="Node" parent="BTSelector"]
+script = ExtResource("3_g4hck")
+
+[node name="BTSleep" type="Node" parent="BTSelector"]
+script = ExtResource("4_77lsb")
+
+[node name="BTSequence" type="Node" parent="BTSelector"]
+script = ExtResource("5_gtni2")
+
+[node name="BTBeatA" type="Node" parent="BTSelector/BTSequence"]
+script = ExtResource("6_cmx4f")
+
+[node name="BTBeatB" type="Node" parent="BTSelector/BTSequence"]
+script = ExtResource("7_4b1ms")
